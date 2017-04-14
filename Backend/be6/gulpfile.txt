@@ -1,0 +1,41 @@
+const gulp = require('gulp');
+var nodemon = require('gulp-nodemon');
+var minify = require('gulp-minify');
+var browserSync = require('browser-sync');
+// gulp.task('default',['task1', 'task2'], function(){
+//   console.log('DEFAULT TASK');
+// });
+//
+// gulp.task('task1', function(){
+//   console.log('lonf cong');
+// });
+//
+// gulp.task('task2', function(){
+//   console.log('cau dan');
+// });
+
+gulp.task('serve', ['run', 'watch'], function(){
+  browserSync.init({
+    proxy: 'http://localhost:9000',
+    files:['client/**/*.*'],
+    port: 9001
+  });
+})
+
+gulp.task('run',['minify'],function(){
+  nodemon({
+    script: 'express.js'
+  });
+});
+
+gulp.task('watch',function(){
+  gulp.watch('test.js', function(){
+    console.log('.JS is change');
+  })
+})
+
+gulp.task('minify', function(){
+  gulp.src('src/*.js')
+      .pipe(minify())
+      .pipe(gulp.dest('dest'))
+})

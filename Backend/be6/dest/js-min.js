@@ -1,0 +1,1 @@
+var a=function(){console.log("ASDFGHJKL")},x=10;

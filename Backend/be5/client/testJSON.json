@@ -1,0 +1,68 @@
+{
+  "sections" : [
+    {
+      "purpose": "READING AND WRITING",
+      "content" : "",
+      "parts" : [
+        {
+          "purpose" : "Read the passage and decide which is the best answer. Circle the letter A, B, C or D next to the word you choose.",
+          "content" : "Paper is named for papyrus, a reed like plant used by ancient Egyptians as writing material more than 5000 years ago. The Chinese invented the paper that we use 2000 years ago.",
+          "questions" : [
+            {
+              "type"    : "single",
+              "content" : "According to the passage, the paper that we use was first invented by",
+              "answers" : [
+                {
+                  "value" : "A",
+                  "label" : "the Chinese"
+                },{
+                  "value" : "B",
+                  "label" : "the Egyptians"
+                },{
+                  "value" : "C",
+                  "label" : "ancient cultures"
+                }
+              ]
+            },
+            {
+              "type"    : "multiple",
+              "content" : "According to the passage, the paper that we use was first invented by",
+              "answers" : [
+                {
+                  "value" : "A",
+                  "label" : "the Chinese"
+                },{
+                  "value" : "B",
+                  "label" : "the Egyptians"
+                },{
+                  "value" : "C",
+                  "label" : "ancient cultures"
+                }
+              ]
+            },
+            {
+              "type"    : "single",
+              "content" : "According to the passage, the paper that we use was first invented by",
+              "answers" : [
+                {
+                  "value" : "A",
+                  "label" : "the Chinese"
+                },{
+                  "value" : "B",
+                  "label" : "the Egyptians"
+                },{
+                  "value" : "C",
+                  "label" : "ancient cultures"
+                }
+              ]
+            },
+            {
+              "type"    : "fill",
+              "content" : "According to the passage, the paper that we use was first invented by"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <title>Đề thi TechKids</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="text/javascript" src="libs/jquery.min.js"></script>
+  <script type="text/javascript" src="libs/handlebars.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+  <script id="template-question-single" type="text/x-handlebars-template">
+    <p>{{id}}. {{content}}</p>
+    <div class="form-group">
+      {{#each answers}}
+        <input type="radio" value="{{value}}" name="{{../id}}_{{../part}}_{{../section}}_{{../test}}" id="{{../id}}_{{../part}}_{{../section}}_{{../test}}_{{@index}}">
+        <label class="answer_label" for="{{../id}}_{{../part}}_{{../section}}_{{../test}}_{{@index}}">
+          {{label}}
+        </label>
+      {{/each}}
+    </div>
+  </script>
+  <script id="template-question-multiple" type="text/x-handlebars-template">
+    <p>{{id}}. {{content}}</p>
+    <div class="form-group">
+      {{#each answers}}
+        <input type="checkbox" value="{{value}}" name="{{../id}}_{{../part}}_{{../section}}_{{../test}}" id="{{../id}}_{{../part}}_{{../section}}_{{../test}}_{{@index}}">
+        <label class="answer_label" for="{{../id}}_{{../part}}_{{../section}}_{{../test}}_{{@index}}">
+          {{label}}
+        </label>
+      {{/each}}
+    </div>
+  </script>
+  <script id="template-question-fill" type="text/x-handlebars-template">
+    <p>{{id}}. {{content}}</p>
+    <div class="form-group">
+      <input type="text" class="form-control" name="{{../id}}_{{../part}}_{{../section}}_{{../test}}" placeholder="Your answer">
+    </div>
+  </script>
+  <script id="template-all" type="text/x-handlebars-template">
+    {{#each sections}}
+      <h2 class="text-center">SECTION {{id}}: {{purpose}}</h2>
+      <p>{{content}}</p>
+      {{#each parts}}
+        <h5><strong>Part {{id}}: {{purpose}}</strong></h5>
+        <p>{{content}}</p>
+        {{listQuestions questions}}
+      {{/each}}
+    {{/each}}
+    <button type="submit" class="btn btn-primary">SUBMIT</button>
+  </script>
+  <section class="container">
+    <div class="row">
+      <form class="col-sm-8 col-sm-offset-2" id="content" action="http://example.com">
+      </form>
+    </div>
+  </section>
+</body>
+</html>

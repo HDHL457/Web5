@@ -1,0 +1,10 @@
+*,
+*:before,
+*:after{
+  box-sizing: border-box;
+}
+
+.answer_label{
+  display: inline-block;
+  margin-right: 15px;
+}
