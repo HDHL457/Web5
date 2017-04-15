@@ -1,0 +1,13 @@
+/*==Item1==*/
+#menu ul li {
+ position: relative;
+}
+#sub-menu {
+ position: absolute;
+ left: 100px;
+ top: 0;
+  display: none;
+}
+#menu li .sub-menu li:hover #sub-menu {
+ display: block;
+}

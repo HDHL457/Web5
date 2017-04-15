@@ -1,0 +1,51 @@
+p {
+  color: red;
+}
+
+h1 {
+  font-family: "Tahoma", "Arial", "san-serif";
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+#top {
+  text-decoration: line-through;
+}
+
+.green_background.white_text {
+  background-color: green;
+  color : white;
+}
+
+/* Any tag that has attribute href: */
+[href]{
+  font-size : 100px;
+}
+
+/*Tags relationship*/
+ol li{
+  text-transform: uppercase;
+}
+
+ol > li{
+  text-transform: lowercase;
+}
+
+li:hover{
+  background-color:yellow;
+}
+
+a:active{
+  color: red;
+}
+
+input:focus{
+  border: 1px solid red;
+  border-radius: 50%
+}
+
+.required_field::after{
+  color: red;
+  content:"*";
+}
