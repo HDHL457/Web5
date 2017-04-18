@@ -5,24 +5,37 @@
   text-align: center;
 }
 
-nav.menu span {
+.menu nav {
+  background: brown;
+  text-align: center;
+  color: white;
+}
+
+.menu nav {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+.menu nav nav {
+  top: 0;
+  left: 100%;
+}
+
+.menu span:hover > nav {
+  display: block;
+}
+
+.menu span {
   display: inline-block;
   width: 100px;
-  height: 30px;
-}
-
-nav span:hover {
-  color: #FFFFFF;
-  background-color: #9CD08F;
+  line-height: 30px;
+  font-weight: bold;
   cursor: pointer;
+  position: relative;
 }
 
-nav.menu_vertical {
-  display: block;
-  width: 100px;
-}
-
-nav.menu_vertical span {
-  display: block;
-  border-bottom: 1px solid white;
+.menu span:hover{
+  background: teal;
+  color: black;
 }
