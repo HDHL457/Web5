@@ -1,0 +1,60 @@
+<div class="modal-body" id="item_modal_body">
+  <div>
+    <a ng-href="#!/post-new/{{data._id}}" class="btn btn-primary" ng-if="data.author._id == globals.user._id">
+      EDIT POST
+    </a>
+    <button ng-bootbox-confirm="Bạn chắc chứ? "
+            ng-bootbox-confirm-action="delete(data._id)" class="btn btn-danger" ng-if="data.author._id == globals.user._id || globals.user.role == 'admin'">
+      DELETE POST
+    </button>
+
+    <div class="pull-right text-center item_modal_statistic">
+      <div>
+        <span class="glyphicon glyphicon-eye-open"></span>
+        <p>{{data.views}}</p>
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-time"></span>
+        <p>{{data.createdAt | date:'MM/dd/yyyy'}}</p>
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-plus"></span>
+        <p>{{data.like_number}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="image_container">
+    <img src="{{data.img}}">
+  </div>
+  <hr>
+  <div class="info_container">
+    <div class="author_info">
+      <img src="{{data.author.avatar}}" class="author_avatar">
+      <h3>{{data.author.username}}</h3>
+      <p class="text-muted">{{data.title}}</p>
+    </div>
+    <p>{{data.content}}</p>
+    <button ng-if="!data.is_like" ng-click="like(data._id)" class="btn btn-success">like :))</button>
+    <button ng-if="data.is_like" ng-click="unlike(data._id)" class="btn btn-warning">unlike</button>
+
+  </div>
+  <hr>
+
+  <div class="comment_container">
+    <div class="author_info" ng-repeat="item in data._comments" >
+      <div class="comment_item">
+        <img src="{{item.author.avatar}}" class="author_avatar">
+        <button ng-bootbox-confirm="Bạn chắc chứ? "
+                ng-bootbox-confirm-action="deleteComment(item)" class="delete-btn pull-right" ng-if="item.author._id == globals.user._id || globals.user.role == 'admin'"><span class="glyphicon glyphicon-minus"></span></button>
+        <h4>{{item.author.username}}</h4>
+        <p class="text-muted">{{item.content}}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <form ng-submit="comment(data._id)">
+    <input type="text" class="form-control" ng-model="formData.content">
+  </form>
+</div>
+

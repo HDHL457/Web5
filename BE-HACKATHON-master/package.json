@@ -1,0 +1,30 @@
+{
+  "name": "be8",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm install",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "composable-middleware": "^0.3.0",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.9.0",
+    "mongoose-find-one-or-create": "^0.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppppbn/BE8.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ppppbn/BE8/issues"
+  },
+  "homepage": "https://github.com/ppppbn/BE8#readme",
+  "description": ""
+}

@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="col-md-8 col-md-offset-2">
+    <h2 class="text-center" ng-if="type == 'create'">Create New Hot Girl</h2>
+    <h2 class="text-center" ng-if="type == 'edit'">Edit Hot Girl</h2>
+
+    <form class="" name="login" ng-submit="createPost()">
+      <input type="text" ng-model="formData.title" class="form-control" placeholder="Tiêu đề" required autofocus>
+      <input type="text" ng-model="formData.img" class="form-control" placeholder="Link ảnh" required>
+      <img src="{{formData.img}}" width="100%" alt="">
+      <textarea rows="8" ng-model="formData.content" class="form-control" placeholder="Nội dung" required></textarea>
+      <select class="form-control" name="" ng-model="formData.category" id="">
+        <option value="{{item}}" ng-repeat="item in categories" class="form-control">{{item}}</option>
+      </select>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" ng-if="type == 'create'">Create</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" ng-if="type == 'edit'">Update</button>
+
+    </form><!-- /form -->
+
+  </div>
+</div>

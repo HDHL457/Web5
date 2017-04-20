@@ -1,0 +1,53 @@
+<section class="container">
+  <div class="row" id="item_list">
+    <div class="col-md-3 col-sm-6 item_container" ng-repeat="item in posts">
+      <div class="item">
+        <div class="image_container">
+          <img src="{{item.img}}">
+          <div class="overlay">
+            <button type="button" class="plus_button" ng-click="openDetail(item)">
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+            <div class="img_statistics_container">
+              <div class="row text-center">
+                <div class="col-xs-4">
+                  <span class="glyphicon glyphicon-eye-open"></span>
+                  <p>{{item.views}}</p>
+                </div>
+                <div class="col-xs-4">
+                  <span class="glyphicon glyphicon-time"></span>
+                  <p>{{item.createdAt| date:'MM/dd/yyyy'}}</p>
+                </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{item.like_number}}</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info_container">
+          <div class="author_info">
+            <img src="{{item.author.avatar}}" class="author_avatar">
+            <h3>{{item.author.username}}</h3>
+            <p class="text-muted">{{item.title}}</p>
+          </div>
+          <p>{{item.content}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: center">
+    <button class="btn btn-lg btn-primary" ng-click="loadmore()">Loadmore</button>
+  </div>
+</section>
+
+<!--<div class="modal fade" id="item_modal" tabindex="-1" role="dialog" aria-labelledby="item_modal_label">-->
+  <!--<div class="modal-dialog" role="document">-->
+    <!--<div class="modal-content">-->
+      <!--<div class="modal-body" id="item_modal_body">-->
+        <!--&lt;!&ndash; Modal content goes here &ndash;&gt;-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->

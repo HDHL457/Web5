@@ -1,0 +1,26 @@
+<header class="header">
+  <nav class="container">
+    <div class="row">
+      <form class="col-sm-3 search_form">
+        <input type="text" name="s" placeholder="Enter your search..." class="form-control">
+        <span class="glyphicon glyphicon-search"></span>
+      </form>
+      <div class="col-sm-6 text-center site_logo">
+        <a href="#!/">
+          <img src="img/Logo.png" alt="TechKids Hot Girls Logo">
+          HOT GIRLS
+        </a>
+      </div>
+      <div class="col-sm-3 profile_group">
+        <div class="profile_wrapper">
+          <a ng-href="#!/post-new" class="item_btn"><span class="glyphicon glyphicon-camera"></span></a>
+          <button class="item_btn"><img src="{{globals.user.avatar}}" width="100%" alt=""></button>
+          <span class="username">
+            {{globals.user.username}}
+            <button class="btn btn-danger pull-right" ng-if="globals.user" ng-click="Logout()">Logout</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

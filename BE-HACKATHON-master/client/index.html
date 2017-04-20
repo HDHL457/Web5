@@ -1,0 +1,499 @@
+<!doctype html>
+<html>
+  <head>
+    <title>TechKids Hot Girls</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js">
+
+    </script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script type="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.min.js.map"></script>
+    <script type="text/javascript" src="main.js">
+
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="container">
+        <div class="row">
+          <form class="col-sm-3 search_form">
+            <input type="text" name="s" placeholder="Enter your search..." class="form-control">
+            <span class="glyphicon glyphicon-search"></span>
+          </form>
+          <div class="col-sm-6 text-center site_logo">
+            <img src="images/logo.png" alt="TechKids Hot Girls Logo">
+            HOT GIRLS
+          </div>
+          <div class="col-sm-3 profile_group">
+            <div class="profile_wrapper">
+              <button><span class="glyphicon glyphicon-camera"></span></button>
+              <button><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+              <span class="username">Long Cong</span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="row" id="girl_list">
+
+      </div>
+    </section>
+
+    <script id="girl_item_template" type="text/x-handlebars-template">
+      {{#each result}}
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/mai.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/gai.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/thao.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/khiem.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/mai.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/gai.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/thao.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/khiem.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/mai.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/gai.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/thao.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 item_container">
+        <div class="item">
+          <div class="image_container">
+            <img src="images/khiem.png">
+            <div class="overlay">
+              <button type="button" class="plus_button">
+                <span class="glyphicon glyphicon-plus"></span>
+              </button>
+              <div class="img_statistics_container">
+                <div class="row text-center">
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <p>{{views}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-time"></span>
+                    <p>{{createdAt}}</p>
+                  </div>
+                  <div class="col-xs-4">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <p>{{like_number}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_container">
+            <div class="author_info">
+              <img src="images/ava.png" class="author_avatar">
+              <h3>{{title}}</h3>
+              <p class="text-muted">{{author}}</p>
+            </div>
+            <p>{{_comments}}</p>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </script>
+  </body>
+</html>
